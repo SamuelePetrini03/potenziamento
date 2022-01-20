@@ -17,19 +17,22 @@ EditText txtDurata;
 EditText txtAutore;
 Spinner spGeneri;
 GestoreBrano gb;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         String[] generi = {"Pop", "Rap", "Trap", "Dance"};
-        ArrayAdapter<String> aaG= new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, generi);
-        spGeneri = (Spinner)findViewById(R.id.spGeneri);
+        ArrayAdapter<String> aaG = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, generi);
+        spGeneri = (Spinner) findViewById(R.id.spGeneri);
         spGeneri.setAdapter(aaG);
 
-        btnInserisci = (Button)findViewById(R.id.btnInserisci);
-        txtTitolo = (EditText)findViewById(R.id.txtTitolo);
-        txtDurata = (EditText)findViewById(R.id.txtDurata);
-        txtAutore = (EditText)findViewById(R.id.txtAutore);
+        btnInserisci = (Button) findViewById(R.id.btnInserisci);
+        txtTitolo = (EditText) findViewById(R.id.txtTitolo);
+        txtDurata = (EditText) findViewById(R.id.txtDurata);
+        txtAutore = (EditText) findViewById(R.id.txtAutore);
 
         gb = new GestoreBrano();
 
@@ -44,5 +47,6 @@ GestoreBrano gb;
         });
     }
 }
+
 
 
